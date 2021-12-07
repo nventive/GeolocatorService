@@ -6,7 +6,7 @@
 resources:
    containers:
      - container: windows
-       image: nventive/vs_build-tools:16.8.6
+       image: nventive/vs_build-tools:16.9.6
 
 variables:
 - name: NUGET_VERSION
