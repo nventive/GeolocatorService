@@ -3,7 +3,7 @@
 - task: UseDotNet@2
   inputs:
     packageType: 'runtime'
-    version: '2.1.0'
+    version: '2.2.x'
     installationPath: '$(Agent.ToolsDirectory)/dotnet'
 
 - task: GitVersion@5
@@ -12,27 +12,6 @@
     useConfigFile: true
     configFilePath: build/gitversion.yml
   displayName: 'Calculate version'
-
-# - task: NuGetToolInstaller@0
-#   displayName: 'Install NuGet $(NUGET_VERSION)'
-#   inputs:
-#     versionSpec: $(NUGET_VERSION)
-#     checkLatest: false
-
-# - task: NuGetCommand@2
-#   displayName: 'Restore solution packages'
-#   inputs:
-#     command: restore
-#     solution: $(Build.SourcesDirectory)/$(SolutionFileName)
-#     selectOrConfig: select
-#     feedRestore: nventive
-#     includeNuGetOrg: true
-#     verbosityRestore: Normal
-#     noCache: true
-
-- task: NuGetAuthenticate@1
-  inputs:
-    forceReinstallCredentialProvider: true
 
 - task: MSBuild@1
   displayName: 'Restore solution packages'
