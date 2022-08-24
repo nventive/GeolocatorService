@@ -31,16 +31,20 @@ namespace GeolocatorService
 
 		public async Task<bool> RequestPermission(CancellationToken ct)
 		{
-			// Only subscribe to these events here, not in the ctor, because subscribing to these
+			// Only subscribe to events here, not in the ctor, because subscribing to these
 			// Geolocator events causes the permission to be immediately requested and we want to allow
 			// greater flexibility with the moment the permission is requested.
+
 			_locator.StatusChanged -= OnStatusChanged;
 			_locator.StatusChanged += OnStatusChanged;
 
-			_locator.PositionChanged -= OnPositionChanged;
-			_locator.PositionChanged += OnPositionChanged;
-
 			var status = await Geolocator.RequestAccessAsync().AsTask(ct);
+
+			if (status == GeolocationAccessStatus.Allowed)
+			{
+				_locator.PositionChanged -= OnPositionChanged;
+				_locator.PositionChanged += OnPositionChanged;
+			}
 
 			return status == GeolocationAccessStatus.Allowed;
 		}

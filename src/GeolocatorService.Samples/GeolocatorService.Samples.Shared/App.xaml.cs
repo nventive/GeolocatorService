@@ -29,7 +29,7 @@ namespace GeolocatorService.Samples
 		/// </summary>
 		public App()
 		{
-			ConfigureFilters(global::Uno.Extensions.LogExtensionPoint.AmbientLoggerFactory);
+			// ConfigureFilters(AmbientLoggerFactory);
 
 			this.InitializeComponent();
 			this.Suspending += OnSuspending;
