@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
-    <TargetFrameworks>uap10.0.19041;netstandard2.0;xamarinios10;xamarinmac20;monoandroid11.0</TargetFrameworks>
+    <TargetFrameworks>uap10.0.19041;netstandard2.0;xamarinios10;xamarinmac20;monoandroid12.0</TargetFrameworks>
     <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
     <RootNamespace>GeolocatorService.Reactive</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Reactive.Interfaces" Version="4.4.1" />
-    <PackageReference Include="Uno.UI" Version="3.11.6" />
+    <PackageReference Include="Uno.UI" Version="4.2.6" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />

@@ -69,10 +69,18 @@
     <Reference Include="System.Memory" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="3.11.6" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="3.11.6" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Microsoft.Extensions.Logging">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.UI" Version="4.2.6" />
+    <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging">
+      <Version>4.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="Uno.UI.RemoteControl" Version="4.2.6" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
   </ItemGroup>
   <Import Project="..\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems" Label="Shared" Condition="Exists('..\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems')" />
   <ItemGroup>
