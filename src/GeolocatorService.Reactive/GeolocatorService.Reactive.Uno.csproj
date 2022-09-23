@@ -20,6 +20,6 @@
     <UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
   </ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="../GeolocatorService/GeolocatorService.csproj" />
+		<ProjectReference Include="..\GeolocatorService\GeolocatorService.Uno.csproj" />
 	</ItemGroup>
 </Project>
