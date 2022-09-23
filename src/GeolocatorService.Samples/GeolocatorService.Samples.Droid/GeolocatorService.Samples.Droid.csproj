@@ -90,13 +90,13 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GeolocatorService.Reactive\GeolocatorService.Reactive.csproj">
+    <ProjectReference Include="..\..\GeolocatorService.Reactive\GeolocatorService.Reactive.Uno.csproj">
       <Project>{713765fe-a442-4bac-bb92-17f6030dd1c9}</Project>
-      <Name>GeolocatorService.Reactive</Name>
+      <Name>GeolocatorService.Reactive.Uno</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\GeolocatorService\GeolocatorService.csproj">
+    <ProjectReference Include="..\..\GeolocatorService\GeolocatorService.Uno.csproj">
       <Project>{0f4f3ad4-6264-434e-af84-4408e6381ea9}</Project>
-      <Name>GeolocatorService</Name>
+      <Name>GeolocatorService.Uno</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems" Label="Shared" Condition="Exists('..\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems')" />
