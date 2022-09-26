@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32228.430
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeolocatorService.Uno", "src\GeolocatorService\GeolocatorService.Uno.csproj", "{0F4F3AD4-6264-434E-AF84-4408E6381EA9}"
 EndProject
@@ -23,9 +23,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C877
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{B0031725-3F32-4FA1-837D-3E9288E85168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeolocatorService.Uno.WinUI", "src\GeolocatorService.Uno.WinUI\GeolocatorService.Uno.WinUI.csproj", "{5FBB5EA7-CA70-4D26-A9E4-C3BC33F44C20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeolocatorService.Uno.WinUI", "src\GeolocatorService.Uno.WinUI\GeolocatorService.Uno.WinUI.csproj", "{5FBB5EA7-CA70-4D26-A9E4-C3BC33F44C20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeolocatorService.Reactive.Uno.WinUI", "src\GeolocatorService.Reactive.Uno.WinUI\GeolocatorService.Reactive.Uno.WinUI.csproj", "{954BA223-2E23-44E9-A761-14D7361A4BB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeolocatorService.Reactive.Uno.WinUI", "src\GeolocatorService.Reactive.Uno.WinUI\GeolocatorService.Reactive.Uno.WinUI.csproj", "{954BA223-2E23-44E9-A761-14D7361A4BB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -668,9 +668,13 @@ Global
 		SolutionGuid = {A11328CB-A3FE-4BA9-9F1F-87296C0B351C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{0f4f3ad4-6264-434e-af84-4408e6381ea9}*SharedItemsImports = 5
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{3465a672-7faa-49f6-a902-9935da03d0bd}*SharedItemsImports = 4
+		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{5fbb5ea7-ca70-4d26-a9e4-c3bc33f44c20}*SharedItemsImports = 5
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{6b817ce2-cf55-4159-93d1-3004017a42fa}*SharedItemsImports = 4
+		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{713765fe-a442-4bac-bb92-17f6030dd1c9}*SharedItemsImports = 5
+		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{954ba223-2e23-44e9-a761-14d7361a4bb4}*SharedItemsImports = 5
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{bcf99165-4ade-4fa1-8515-018c3d41f2bf}*SharedItemsImports = 4
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{d3c1f581-1a60-4b19-a2b7-a4ddb2a0f794}*SharedItemsImports = 4
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{e2a7d9bb-95ec-44d2-bdbe-35c480eb9c87}*SharedItemsImports = 5
