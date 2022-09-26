@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.UI.Xaml;
+using Windows.UI.Xaml;
 
 namespace GeolocatorService.Samples.Wasm
 {
@@ -9,7 +9,7 @@ namespace GeolocatorService.Samples.Wasm
 
 		static int Main(string[] args)
 		{
-			Microsoft.UI.Xaml.Application.Start(_ => _app = new App());
+			Windows.UI.Xaml.Application.Start(_ => _app = new App());
 
 			return 0;
 		}

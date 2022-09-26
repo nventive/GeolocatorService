@@ -8,13 +8,13 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
 namespace GeolocatorService.Samples
 {
@@ -48,7 +48,7 @@ namespace GeolocatorService.Samples
 				// this.DebugSettings.EnableFrameRateCounter = true;
 			}
 #endif
-			Frame rootFrame = Microsoft.UI.Xaml.Window.Current.Content as Frame;
+			Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
 
 			// Do not repeat app initialization when the Window already has content,
 			// just ensure that the window is active
@@ -65,7 +65,7 @@ namespace GeolocatorService.Samples
 				}
 
 				// Place the frame in the current Window
-				Microsoft.UI.Xaml.Window.Current.Content = rootFrame;
+				Windows.UI.Xaml.Window.Current.Content = rootFrame;
 			}
 
 			if (e.PrelaunchActivated == false)
@@ -78,7 +78,7 @@ namespace GeolocatorService.Samples
 					rootFrame.Navigate(typeof(MainPage), e.Arguments);
 				}
 				// Ensure the current window is active
-				Microsoft.UI.Xaml.Window.Current.Activate();
+				Windows.UI.Xaml.Window.Current.Activate();
 			}
 		}
 
@@ -133,22 +133,22 @@ namespace GeolocatorService.Samples
 				builder.AddFilter("Microsoft", LogLevel.Warning);
 
 				// Generic Xaml events
-				// builder.AddFilter("Microsoft.UI.Xaml", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.VisualStateGroup", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.StateTriggerBase", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.UIElement", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.FrameworkElement", LogLevel.Trace );
+				// builder.AddFilter("Windows.UI.Xaml", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.StateTriggerBase", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.UIElement", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.FrameworkElement", LogLevel.Trace );
 
 				// Layouter specific messages
-				// builder.AddFilter("Microsoft.UI.Xaml.Controls", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.Controls.Layouter", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.Controls.Panel", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.Controls", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.Controls.Layouter", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.Controls.Panel", LogLevel.Debug );
 
 				// builder.AddFilter("Windows.Storage", LogLevel.Debug );
 
 				// Binding related messages
-				// builder.AddFilter("Microsoft.UI.Xaml.Data", LogLevel.Debug );
-				// builder.AddFilter("Microsoft.UI.Xaml.Data", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.Data", LogLevel.Debug );
+				// builder.AddFilter("Windows.UI.Xaml.Data", LogLevel.Debug );
 
 				// Binder memory references tracking
 				// builder.AddFilter("Uno.UI.DataBinding.BinderReferenceHolder", LogLevel.Debug );

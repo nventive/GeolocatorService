@@ -23,5 +23,4 @@
 	<ItemGroup>
 		<ProjectReference Include="..\GeolocatorService\GeolocatorService.Uno.csproj" />
 	</ItemGroup>
-	<Import Project="..\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems" Label="Shared" />
 </Project>

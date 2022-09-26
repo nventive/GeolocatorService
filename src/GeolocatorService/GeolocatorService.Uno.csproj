@@ -25,5 +25,5 @@
 		<UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
 	</ItemGroup>
 	
-  <Import Project="..\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems" Label="Shared" />
+	<Import Project="..\GeolocatorService.Shared\GeolocatorService.Shared.projitems" Label="Shared" />
 </Project>
