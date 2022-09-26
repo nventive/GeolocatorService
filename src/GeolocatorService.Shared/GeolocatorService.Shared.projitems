@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>84f0f4c5-c882-45d7-bf18-f24dc56f6da9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GeolocatorService.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)GeocoordinateExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeolocatorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeolocatorServiceExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IGeolocatorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocationChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocationPermissionChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MockedLocationService.cs" />
+  </ItemGroup>
+</Project>
