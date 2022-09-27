@@ -1,26 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="MSBuild.Sdk.Extras/3.0.44">
-  <PropertyGroup>
-    <TargetFrameworks>uap10.0.19041;netstandard2.0;xamarinios10;xamarinmac20;monoandroid12.0</TargetFrameworks>
-    <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
-    <GenerateLibraryLayout>true</GenerateLibraryLayout>
-    <RootNamespace>GeolocatorService.Reactive</RootNamespace>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Reactive.Interfaces" Version="4.4.1" />
-    <PackageReference Include="Uno.UI" Version="4.2.6" />
-	<PackageReference Include="Uno.SourceGenerationTasks" Version="4.1.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFrameworks>uap10.0.19041;netstandard2.0;xamarinios10;xamarinmac20;monoandroid12.0</TargetFrameworks>
+		<!-- Ensures the .xr.xml files are generated in a proper layout folder -->
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>
+		<RootNamespace>GeolocatorService.Reactive</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Reactive.Interfaces" Version="4.4.1" />
+		<PackageReference Include="Uno.UI" Version="4.2.6" />
+		<PackageReference Include="Uno.SourceGenerationTasks" Version="4.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+		<Compile Update="**\*.xaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="../GeolocatorService/GeolocatorService.csproj" />
 	</ItemGroup>
+
+	<Import Project="..\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.projitems" Label="Shared" />
 </Project>

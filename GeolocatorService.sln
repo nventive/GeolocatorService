@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeolocatorService.Reactive.
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GeolocatorService.Shared", "src\GeolocatorService.Shared\GeolocatorService.Shared.shproj", "{84F0F4C5-C882-45D7-BF18-F24DC56F6DA9}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GeolocatorService.Reactive.Shared", "src\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.shproj", "{3042C0B4-7E9C-49BA-890B-DADDBFA76D85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -672,9 +674,12 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\GeolocatorService.Shared\GeolocatorService.Shared.projitems*{02da3557-9634-4f4a-bdda-3cbb4d177fa8}*SharedItemsImports = 5
 		src\GeolocatorService.Shared\GeolocatorService.Shared.projitems*{0f4f3ad4-6264-434e-af84-4408e6381ea9}*SharedItemsImports = 5
+		src\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.projitems*{3042c0b4-7e9c-49ba-890b-daddbfa76d85}*SharedItemsImports = 13
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{3465a672-7faa-49f6-a902-9935da03d0bd}*SharedItemsImports = 4
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{6b817ce2-cf55-4159-93d1-3004017a42fa}*SharedItemsImports = 4
+		src\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.projitems*{713765fe-a442-4bac-bb92-17f6030dd1c9}*SharedItemsImports = 5
+		src\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.projitems*{7fa6fbe0-f56c-4600-a52d-ff6a1b393fa3}*SharedItemsImports = 5
 		src\GeolocatorService.Shared\GeolocatorService.Shared.projitems*{84f0f4c5-c882-45d7-bf18-f24dc56f6da9}*SharedItemsImports = 13
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{bcf99165-4ade-4fa1-8515-018c3d41f2bf}*SharedItemsImports = 4
 		src\GeolocatorService.Samples\GeolocatorService.Samples.Shared\GeolocatorService.Samples.Shared.projitems*{d3c1f581-1a60-4b19-a2b7-a4ddb2a0f794}*SharedItemsImports = 4
