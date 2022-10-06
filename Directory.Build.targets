@@ -1,3 +1,4 @@
+<!-- This is a SourceLink workaround documented here: https://github.com/clairernovotny/DeterministicBuilds#work-around-for-net-sdk-prior-31300 -->
 <Project>
   <PropertyGroup>
     <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
