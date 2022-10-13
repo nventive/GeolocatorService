@@ -118,7 +118,7 @@ namespace GeolocatorService.Samples
                 builder.AddProvider(new global::Uno.Extensions.Logging.WebAssembly.WebAssemblyConsoleLoggerProvider());
 #elif __IOS__
                 builder.AddProvider(new global::Uno.Extensions.Logging.OSLogLoggerProvider());
-#elif NETFX_CORE
+#elif WINDOWS_UWP
                 builder.AddDebug();
 #else
 				builder.AddConsole();
