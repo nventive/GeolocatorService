@@ -12,9 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)GeocoordinateExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GeolocatorService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GeolocatorServiceExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IGeolocatorService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocationChangedEventArgs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocationPermissionChangedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LocationResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MockedLocationService.cs" />
   </ItemGroup>

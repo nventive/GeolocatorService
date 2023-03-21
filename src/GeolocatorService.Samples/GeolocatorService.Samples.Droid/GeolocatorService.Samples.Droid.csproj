@@ -90,6 +90,10 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GeolocatorService.Abstractions\GeolocatorService.Abstractions.csproj">
+      <Project>{140C9950-099A-44E2-8627-9644733D6C3F}</Project>
+      <Name>GeolocatorService.Abstractions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\GeolocatorService.Reactive\GeolocatorService.Reactive.csproj">
       <Project>{713765fe-a442-4bac-bb92-17f6030dd1c9}</Project>
       <Name>GeolocatorService.Reactive</Name>
