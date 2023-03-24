@@ -8,9 +8,16 @@ GeolocatorService aims to simplify getting the user's current location and handl
 
 ## Getting Started
 
+#### Xamarin / UWP
 Add the GeolocatorService nuget package to your project heads.
 
-To have access to reactive extensions such as ```GetAndObserveLocation```, add the GeolocatorService.Reactive nuget package to your project.
+To have access to reactive extensions such as `GetAndObserveLocation`, add the GeolocatorService.Reactive nuget package to your project.
+
+#### .Net Mobile / WinUI
+
+Add the GeolocatorService.Uno.WinUI nuget package to your project heads.
+
+To have access to reactive extensions such as `GetAndObserveLocation`, add the GeolocatorService.Reactive.Uno.WinUI nuget package to your project.
 
 ### Add the relevant permissions
 

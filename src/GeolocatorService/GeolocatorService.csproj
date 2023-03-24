@@ -33,6 +33,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\GeolocatorService.Abstractions\GeolocatorService.Abstractions.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
 		<Compile Update="**\*.xaml.cs">
 			<DependentUpon>%(Filename)</DependentUpon>

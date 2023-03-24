@@ -30,7 +30,7 @@ namespace GeolocatorService
 		{
 			try
 			{
-				return new LocationResult (isSuccessful: true, location: await locationService.GetLocation(ct));
+				return new LocationResult(isSuccessful: true, location: await locationService.GetLocation(ct));
 			}
 			catch (InvalidOperationException)
 			{
