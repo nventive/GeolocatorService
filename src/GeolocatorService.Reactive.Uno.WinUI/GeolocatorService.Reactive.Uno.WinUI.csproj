@@ -14,6 +14,7 @@
 		<PackageTags>geolocation;gps;reactive;mvvm;maui;winui;ios;android</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/nventive/GeolocatorService</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<DefineConstants>$(DefineConstants);WINUI</DefineConstants>
 
 		<!-- Needed for Source Link support -->
@@ -32,6 +33,13 @@
 	<ItemGroup>
 		<!-- Needed for Source Link support -->
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.18362'">
