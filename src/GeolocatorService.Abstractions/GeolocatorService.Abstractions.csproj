@@ -14,6 +14,7 @@
 		<PackageTags>geolocation;gps;abstractions;mvvm;xamarin;uwp;ios;android</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/nventive/GeolocatorService</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<!--Needed for Source Link support -->
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -21,4 +22,11 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 </Project>
