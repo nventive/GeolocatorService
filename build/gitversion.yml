@@ -23,7 +23,7 @@ branches:
     tag: dev.{BranchName}
     source-branches: [main]
   feature:
-    tag: ^feature.{BranchName}
+    tag: feature.{BranchName}
     regex: feature/(.*?)
     source-branches: ['main']
     increment: none
