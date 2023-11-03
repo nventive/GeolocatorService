@@ -63,4 +63,5 @@
 	</ItemGroup>
 
 	<Import Project="..\GeolocatorService.Shared\GeolocatorService.Shared.projitems" Label="Shared" />
+	<Import Project="winappsdk-workaround.targets" />
 </Project>
