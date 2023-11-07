@@ -1,20 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-windows10.0.19041;</TargetFrameworks>
+		<TargetFrameworks>net7.0-windows10.0.19041;net7.0-ios;net7.0-android</TargetFrameworks>
+		<LangVersion>10.0</LangVersion>
 		<!-- Ensures the .xr.xml files are generated in a proper layout folder -->
 		<GenerateLibraryLayout>true</GenerateLibraryLayout>
 		<RootNamespace>GeolocatorService</RootNamespace>
 		<Authors>nventive</Authors>
 		<Company>nventive</Company>
-		<AssemblyName>GeolocatorService.Reactive</AssemblyName>
-		<PackageId>GeolocatorService.Reactive</PackageId>
+		<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+		<AssemblyName>GeolocatorService.Reactive.WinUI</AssemblyName>
+		<PackageId>GeolocatorService.Reactive.WinUI</PackageId>
 		<Description>GeolocatorService</Description>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<PackageTags>geolocation;gps;reactive;mvvm;ios;android</PackageTags>
+		<PackageTags>geolocation;gps;reactive;mvvm;maui;winui;ios;android</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/nventive/GeolocatorService</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<DefineConstants>$(DefineConstants);WINUI</DefineConstants>
 
 		<!-- Needed for Source Link support -->
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -28,15 +30,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- Needed for Source Link support -->
+		 <!--Needed for Source Link support--> 
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
-		<Compile Update="**\*.xaml.cs">
-			<DependentUpon>%(Filename)</DependentUpon>
-		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -46,13 +41,22 @@
 		</None>
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)'=='net7.0-windows10.0.19041'">
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
+		<FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.22621.28" />
+		<FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.22621.28" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)'!='net7.0-windows10.0.19041'">
+		<Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+		<Compile Update="**\*.xaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+	</ItemGroup>
 	<ItemGroup>
 		<UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
 	</ItemGroup>
-
 	<ItemGroup>
-		<ProjectReference Include="..\GeolocatorService\GeolocatorService.csproj" />
-		<ProjectReference Include="..\GeolocatorService.Abstractions\GeolocatorService.Abstractions.csproj" />
+		<ProjectReference Include="..\GeolocatorService.WinUI\GeolocatorService.WinUI.csproj" />
 	</ItemGroup>
 
 	<Import Project="..\GeolocatorService.Reactive.Shared\GeolocatorService.Reactive.Shared.projitems" Label="Shared" />

@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"GeolocatorServiceSamples.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"GeolocatorServiceSamples.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
