@@ -1,3 +1,5 @@
+using Uno.UI;
+
 namespace GeolocatorServiceSamples
 {
     public class App : Application

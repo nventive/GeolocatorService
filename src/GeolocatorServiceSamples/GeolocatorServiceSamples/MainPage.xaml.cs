@@ -5,6 +5,7 @@ namespace GeolocatorServiceSamples
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext = new MainPageViewModel(DispatcherQueue);
         }
     }
 }

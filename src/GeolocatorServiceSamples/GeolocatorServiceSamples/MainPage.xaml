@@ -4,11 +4,14 @@
       xmlns:local="using:GeolocatorServiceSamples"
       xmlns:um="using:Uno.Material"
       Background="{ThemeResource BackgroundBrush}">
-  <StackPanel
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-    <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-          Text="Hello Uno Platform"
-          HorizontalAlignment="Center" />
-  </StackPanel>
+  
+  <Grid Background="White">
+    <StackPanel Margin="0,40,0,0">
+
+      <Button Content="Request permission"
+              Command="{Binding RequestPermissionCommand}" />
+
+      <TextBlock Text="{Binding PageContent}" />
+    </StackPanel>
+  </Grid>
 </Page>

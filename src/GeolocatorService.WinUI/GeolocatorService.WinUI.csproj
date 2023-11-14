@@ -1,4 +1,4 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-windows10.0.19041;net7.0-ios;net7.0-android</TargetFrameworks>
 		<LangVersion>10.0</LangVersion>
@@ -25,11 +25,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	</ItemGroup>
-
-	<ItemGroup>
 		<!-- Needed for Source Link support -->
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+		<PackageReference Include="Uno.SourceGenerationTasks" Version="4.2.0" />
+		<PackageReference Include="Uno.WinUI" Version="5.0.41" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net7.0-windows10.0.19041'">
