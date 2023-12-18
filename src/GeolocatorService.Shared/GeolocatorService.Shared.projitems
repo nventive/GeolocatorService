@@ -11,8 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)GeocoordinateExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GeolocatorService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GeolocatorServiceExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LocationResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MockedLocationService.cs" />
   </ItemGroup>
 </Project>
