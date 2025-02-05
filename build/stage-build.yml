@@ -11,11 +11,18 @@
   displayName: 'Calculate version'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Install dotnet 6 workloads'
+  displayName: 'Install dotnet 8 workloads'
   inputs:
     command: 'custom'
     custom: 'workload'
     arguments: 'install android ios macos maccatalyst'
+
+- task: JavaToolInstaller@0
+  displayName: "Install Java SDK 11"
+  inputs:
+    versionSpec: '11'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 
 - task: MSBuild@1
   displayName: 'Restore solution packages'

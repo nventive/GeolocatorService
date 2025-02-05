@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Windows.Devices.Geolocation;
-
-namespace GeolocatorService
+﻿namespace GeolocatorService
 {
 	/// <summary>
 	/// This represents the result of trying to obtain a location.
