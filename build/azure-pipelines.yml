@@ -3,11 +3,6 @@
     include:
     - main
 
-resources:
-   containers:
-     - container: windows
-       image: nventive/vs_build-tools:17.2.5
-
 variables:
 - name: NUGET_VERSION
   value: 6.2.0
@@ -17,6 +12,10 @@ variables:
   value: Packages
 - name: SolutionFileName # Example: MyApplication.sln
   value: GeolocatorService.sln
+- name: IsReleaseBranch # Should this branch name use the release stage
+  value: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+- name: windowsHostedAgentImage
+  value: 'windows-2022'
 
 stages:
 - stage: Build
@@ -31,31 +30,29 @@ stages:
           GeneratePackageOnBuild: true
 
     pool:
-      name: 'windows 2022'
+      vmImage: $(windowsHostedAgentImage)
 
     variables:
     - name: PackageOutputPath # Path where nuget packages will be copied to.
       value: $(Build.ArtifactStagingDirectory)
 
     workspace:
-      clean: all # Cleanup the workspaca before starting
-
-    container: windows
+      clean: all # Cleanup the workspace before starting
 
     steps:
     - template: stage-build.yml
 
 - stage: Release
-  # Only release when the build is not for a Pull Request.
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  # Only release when the build is not for a Pull Request and branch name fits
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), eq(variables['IsReleaseBranch'], 'true'))
   jobs:
-  - job: Publish_NuGet_Internal
+  - job: Publish_NuGet_External
 
     pool:
-      name: 'windows 2022'
+      vmImage: $(windowsHostedAgentImage)
 
     workspace:
-      clean: all # Cleanup the workspaca before starting
+      clean: all # Cleanup the workspace before starting
 
     steps:
     - template: stage-release.yml
