@@ -1,12 +1,16 @@
-# Breaking Changes
+﻿# Breaking Changes
 
 <!-- Add a header (##) with the version and list the breaking changes.-->
 
-## 3.0.x
+## 4.0.x
 <!--
   - `Something` was removed.
   - `This` was renamed to `That`.
 -->
+
+## 3.0.x
+- GeolocatorService.Reactive.Uno.WinUI was removed.
+- Reference to GeolocatorService from GeolocatorService.Reactive was removed.
 
 ## 2.0.x
 
