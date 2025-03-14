@@ -101,6 +101,16 @@ namespace GeolocatorService
 
 		public async Task<bool> RequestPermission(CancellationToken ct)
 		{
+			// Requesting permission repeatedly is not necessary and can, for example,
+			// make the value emitted by the LocationPermissionChanged event become false for a short time
+			// when it was true, even thought the user never revoked the permissions.
+			var isPermissionGranted = await GetIsPermissionGranted(ct);
+
+			if (isPermissionGranted)
+			{
+				return true;
+			}
+
 			// Only subscribe to events here, not in the ctor, because subscribing to these
 			// Geolocator events causes the permission to be immediately requested and we want to allow
 			// greater flexibility with the moment the permission is requested.
