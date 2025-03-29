@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * [2022-08-24] Add support for Android 12
 
 ### Changed
+* [2025-03-28] Updated Contributing documentation.
 * [2022-08-24] Change target Uno.UI version to 4.2.6
 * [2022-08-24] ``LocationChanged`` Event will only be subscribed to after permission with successfully accepted in ``RequestPermission``
 
