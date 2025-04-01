@@ -12,12 +12,11 @@ GitHub Issue: #
  - [ ] Other, please describe:
 
 ## Description
-
 <!-- Please describe the changes that this PR introduces. -->
 
 
 ## Impact on version
-<!-- Please select one or more based on your commits. -->
+<!-- Please select only one based on your commits. -->
 
 - [ ] **Major** (Public API was modified.)
   - Public constructs (class, struct, delegate, enum, etc.) were removed or renamed.
