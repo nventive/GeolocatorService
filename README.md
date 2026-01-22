@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](LICENSE) ![Version](https://img.shields.io/nuget/v/GeolocatorService?style=flat-square) ![Downloads](https://img.shields.io/nuget/dt/GeolocatorService?style=flat-square)
 
-A service to get the user's current location, based on Geolocator, suited to WinUI, UWP or [Uno](https://platform.uno/) apps.
+A service to get the user's current location, based on Geolocator, suited to WinUI or [Uno](https://platform.uno/) apps.
 
 GeolocatorService aims to simplify getting the user's current location and handling most common scenarios, including getting the permission to obtain this location and handling cases where this permission is denied.
 
@@ -11,12 +11,9 @@ GeolocatorService aims to simplify getting the user's current location and handl
 1. ### Add Package
 
    #### .Net Mobile / WinUI
-   
+
    Add the GeolocatorService.Uno.WinUI nuget package to your project heads.
-      
-   #### Xamarin / UWP
-   Add the GeolocatorService nuget package to your project heads.
-   
+
    ### Reactive Extensions
    To have access to reactive extensions such as `GetAndObserveLocation`, add the `GeolocatorService.Reactive` nuget package to your project.
 
