@@ -3,10 +3,10 @@
 <!-- Add a header (##) with the version and list the breaking changes.-->
 
 ## 4.0.x
-<!--
-  - `Something` was removed.
-  - `This` was renamed to `That`.
--->
+- Updated target framework from .NET 8 to .NET 10.
+- Updated Uno.WinUI to 6.3.62.
+- Removed MacOS support in favor of Mac Catalyst.
+- Removed support for Xamarin.
 
 ## 3.0.x
 - GeolocatorService.Reactive.Uno.WinUI was removed.
